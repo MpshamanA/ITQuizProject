@@ -135,15 +135,15 @@ class ViewController: UIViewController {
         
         //        スコアと問題を紐付け
         if scoreNum == 0{
-            mondai(mainQuestion: "会議の議題", answer1: "サマリー", answer2: "アジェンダ", answer3: "モジュール", collectNum: "2")
+            mondai(mainQuestion: "プログラムの不具合", answer1: "バグ", answer2: "アジェンダ", answer3: "モジュール", collectNum: "1")
         }else if scoreNum == 1{
-            mondai(mainQuestion: "進行の妨げとなってる場所", answer1: "ドラフト", answer2: "マイルストーン", answer3: "ボトルネック", collectNum: "3")
+            mondai(mainQuestion: "任務", answer1: "ドラフト", answer2: "マイルストーン", answer3: "ミッション", collectNum: "3")
         }else if scoreNum == 2{
             mondai(mainQuestion: "スケジュール通り", answer1: "オンスケ", answer2: "インフラ", answer3: "アドイン", collectNum: "1")
         }else if scoreNum == 3{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
+            mondai(mainQuestion: "確約", answer1: "インプット", answer2: "コミット", answer3: "ディフ", collectNum: "2")
         }else{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
+            mondai(mainQuestion: "危機的", answer1: "ベスト", answer2: "クリティカル", answer3: "リリース", collectNum: "2")
         }
         
     }
