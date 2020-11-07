@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		834E4FC92556A2BF00D448F8 /* result3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E4FC82556A2BF00D448F8 /* result3ViewController.swift */; };
+		834E4FCC2556A37800D448F8 /* result2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E4FCB2556A37800D448F8 /* result2ViewController.swift */; };
 		837CC555254833630007B089 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837CC554254833630007B089 /* resultViewController.swift */; };
 		8381397F2545617700F17409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381397E2545617700F17409 /* AppDelegate.swift */; };
 		838139812545617700F17409 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838139802545617700F17409 /* SceneDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		834E4FC82556A2BF00D448F8 /* result3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result3ViewController.swift; sourceTree = "<group>"; };
+		834E4FCB2556A37800D448F8 /* result2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result2ViewController.swift; sourceTree = "<group>"; };
 		837CC554254833630007B089 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		8381397B2545617700F17409 /* testquestion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testquestion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8381397E2545617700F17409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				838139822545617700F17409 /* ViewController.swift */,
 				837CC554254833630007B089 /* resultViewController.swift */,
 				838139842545617700F17409 /* Main.storyboard */,
+				834E4FCB2556A37800D448F8 /* result2ViewController.swift */,
+				834E4FC82556A2BF00D448F8 /* result3ViewController.swift */,
 				83DACFB725513D450057D6BE /* Level3ViewController.swift */,
 				83E1F2FB254EBBB200869C9C /* Level2ViewController.swift */,
 				83945478254D6AF800A5D65C /* GameoverViewController.swift */,
@@ -153,8 +159,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				838139832545617700F17409 /* ViewController.swift in Sources */,
+				834E4FC92556A2BF00D448F8 /* result3ViewController.swift in Sources */,
 				8381397F2545617700F17409 /* AppDelegate.swift in Sources */,
 				83E1F2FC254EBBB200869C9C /* Level2ViewController.swift in Sources */,
+				834E4FCC2556A37800D448F8 /* result2ViewController.swift in Sources */,
 				83945479254D6AF800A5D65C /* GameoverViewController.swift in Sources */,
 				838139812545617700F17409 /* SceneDelegate.swift in Sources */,
 				83945476254D6A8100A5D65C /* homeViewController.swift in Sources */,

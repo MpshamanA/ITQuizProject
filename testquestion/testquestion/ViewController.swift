@@ -73,6 +73,14 @@ class ViewController: UIViewController {
         self.button2.isHidden = false
         self.button3.isHidden = false
     }
+//    次へボタンの装飾
+    func NextbuttonDecoration() -> Void{
+        self.Next.layer.borderWidth = 2.0
+        self.Next.layer.borderColor = UIColor.gray.cgColor
+        self.Next.layer.cornerRadius = 20.0      // 角の半径
+        self.Next.clipsToBounds = true           // この設定を入れないと角丸にならない
+    }
+    
     //正解時のアクション
     func correctAction(){
         self.round.text = "○"
@@ -81,6 +89,7 @@ class ViewController: UIViewController {
         self.round.center = CGPoint(x: screenWidth/2, y: screenHeight/2)
         self.scoreNum += 1
         self.score.text = "SCORE:\(scoreNum)"
+        NextbuttonDecoration()
         self.Next.isHidden = false
         correct()
         hidebutton()

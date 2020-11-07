@@ -74,6 +74,13 @@ class Level2ViewController: UIViewController {
         self.button2.isHidden = false
         self.button3.isHidden = false
     }
+    //    次へボタンの装飾
+    func NextbuttonDecoration() -> Void{
+        self.Next.layer.borderWidth = 2.0
+        self.Next.layer.borderColor = UIColor.gray.cgColor
+        self.Next.layer.cornerRadius = 20.0      // 角の半径
+        self.Next.clipsToBounds = true           // この設定を入れないと角丸にならない
+    }
     //正解時のアクション
     func correctAction(){
         self.round.text = "○"
@@ -82,6 +89,7 @@ class Level2ViewController: UIViewController {
         self.round.center = CGPoint(x: screenWidth/2, y: screenHeight/2)
         self.scoreNum += 1
         self.score.text = "SCORE:\(scoreNum)"
+        NextbuttonDecoration()
         self.Next.isHidden = false
         correct()
         hidebutton()
@@ -138,27 +146,25 @@ class Level2ViewController: UIViewController {
         
         //        スコアと問題を紐付け
         if scoreNum == 0{
-            mondai(mainQuestion: "会議の議題", answer1: "サマリー", answer2: "アジェンダ", answer3: "モジュール", collectNum: "2")
+            mondai(mainQuestion: "曖昧", answer1: "インシデント", answer2: "ファジー", answer3: "マター", collectNum: "2")
         }else if scoreNum == 1{
-            mondai(mainQuestion: "進行の妨げとなってる場所", answer1: "ドラフト", answer2: "マイルストーン", answer3: "ボトルネック", collectNum: "3")
+            mondai(mainQuestion: "合意", answer1: "コミット", answer2: "バグ", answer3: "アグリー", collectNum: "3")
         }else if scoreNum == 2{
-            mondai(mainQuestion: "スケジュール通り", answer1: "オンスケ", answer2: "インフラ", answer3: "アドイン", collectNum: "1")
+            mondai(mainQuestion: "問題", answer1: "マター", answer2: "クロージング", answer3: "スクラッチ", collectNum: "1")
         }else if scoreNum == 3{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
+            mondai(mainQuestion: "議題", answer1: "アジェンダ", answer2: "スコープ", answer3: "リバイズ", collectNum: "1")
         }else if scoreNum == 4{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
+            mondai(mainQuestion: "保留", answer1: "アラート", answer2: "クリティカル", answer3: "ペンディング", collectNum: "3")
         }else if scoreNum == 5{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
+            mondai(mainQuestion: "差分", answer1: "ファジー", answer2: "サマリー", answer3: "ディフ", collectNum: "3")
         }else if scoreNum == 6{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
+            mondai(mainQuestion: "合併", answer1: "マージ", answer2: "デプロイ", answer3: "リリース", collectNum: "1")
         }else if scoreNum == 7{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
+            mondai(mainQuestion: "証跡", answer1: "フィックス", answer2: "エビデンス", answer3: "インシデント", collectNum: "2")
         }else if scoreNum == 8{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
-        }else if scoreNum == 9{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
+            mondai(mainQuestion: "遅れている", answer1: "ブレスト", answer2: "ビハインド", answer3: "リバイズ", collectNum: "2")
         }else{
-            mondai(mainQuestion: "問題だよ", answer1: "1", answer2: "2", answer3: "3", collectNum: "2")
+            mondai(mainQuestion: "任命", answer1: "アサイン", answer2: "オフショア", answer3: "フィンテック", collectNum: "1")
         }
         
     }

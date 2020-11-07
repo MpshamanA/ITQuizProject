@@ -21,10 +21,10 @@ class homeViewController: UIViewController {
         //        ダークモード無効
         self.overrideUserInterfaceStyle = .light
 //        フェードインの設定
-        Fadein(lavel: hometitle, starttime: 2.0, delaytime: 3.5)
-        Fadein(lavel: samari, starttime: 1.0, delaytime: 0.5)
-        Fadein(lavel: onsuke, starttime: 1.0, delaytime: 2.5)
-        Fadein(lavel: ajenda, starttime: 1.0, delaytime: 1.5)
+        Fadein(lavel: hometitle, starttime: 2.0, delaytime: 2.5)
+        Fadein(lavel: samari, starttime: 0.7, delaytime: 0.5)
+        Fadein(lavel: onsuke, starttime: 0.7, delaytime: 1.9)
+        Fadein(lavel: ajenda, starttime: 0.7, delaytime: 1.2)
 //        lavelの傾きの設定
         wordlavel(tiltLavel: samari, tilt: -30)
         wordlavel(tiltLavel: onsuke, tilt: -30)
