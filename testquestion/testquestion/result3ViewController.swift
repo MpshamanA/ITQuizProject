@@ -8,12 +8,10 @@
 import UIKit
 
 class result3ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //        ダークモード無効
         self.overrideUserInterfaceStyle = .light
-       
     }
-
 }
