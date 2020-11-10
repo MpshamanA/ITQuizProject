@@ -34,6 +34,9 @@ class Level2ViewController: UIViewController {
         
         //        ダークモード無効
         self.overrideUserInterfaceStyle = .light
+        buttonDecoration(buttonName : button1)
+        buttonDecoration(buttonName : button2)
+        buttonDecoration(buttonName : button3)
     }
     //    全部非表示
     func allhide(){
@@ -74,11 +77,16 @@ class Level2ViewController: UIViewController {
         self.button2.isHidden = false
         self.button3.isHidden = false
     }
+    //    解答ボタンの装飾
+        func buttonDecoration(buttonName : UIButton) -> Void{
+            buttonName.layer.cornerRadius = 10.0      // 角の半径
+            buttonName.clipsToBounds = true           // この設定を入れないと角丸にならない
+        }
     //    次へボタンの装飾
     func NextbuttonDecoration() -> Void{
-        self.Next.layer.borderWidth = 2.0
+        self.Next.layer.borderWidth = 1.0
         self.Next.layer.borderColor = UIColor.gray.cgColor
-        self.Next.layer.cornerRadius = 20.0      // 角の半径
+        self.Next.layer.cornerRadius = 10.0      // 角の半径
         self.Next.clipsToBounds = true           // この設定を入れないと角丸にならない
     }
     //正解時のアクション
