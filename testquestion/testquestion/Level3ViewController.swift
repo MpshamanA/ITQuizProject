@@ -18,6 +18,7 @@ class Level3ViewController: UIViewController {
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var round: UILabel!
     @IBOutlet weak var life: UILabel!
+    @IBOutlet weak var Wrong: UILabel!
     
     
     var collectAnswer = String()
@@ -48,21 +49,25 @@ class Level3ViewController: UIViewController {
         score.isHidden = true
         round.isHidden = true
         life.isHidden = true
+        Wrong.isHidden = true
     }
     
     //    hide()の場合非表示する
     func hide(){
-        self.round?.isHidden = true
-        self.endLabel?.isHidden = true
+        self.round.isHidden = true
+        self.endLabel.isHidden = true
+        self.Wrong.isHidden = true
     }
     //    unhide()の場合表示する
     func unhide(){
-        self.endLabel?.isHidden = false
+        self.endLabel.isHidden = false
+        self.Wrong.isHidden = false
     }
     //    正解時のラベル設定
     func correct(){
-        self.endLabel?.isHidden = true
-        self.round?.isHidden = false
+        self.endLabel.isHidden = true
+        self.round.isHidden = false
+        self.Wrong.isHidden = true
     }
     //    回答ボタン非表示
     func hidebutton(){
@@ -87,6 +92,13 @@ class Level3ViewController: UIViewController {
         self.Next.layer.borderColor = UIColor.gray.cgColor
         self.Next.layer.cornerRadius = 10.0      // 角の半径
         self.Next.clipsToBounds = true           // この設定を入れないと角丸にならない
+    }
+    //    フェードアウト
+    func Fadeout(lavel : UILabel, starttime : Double, delaytime : Double){
+        lavel.alpha = 1.0
+        UIView.animate(withDuration: TimeInterval(starttime), delay: delaytime, options: [.curveEaseIn], animations: {
+            lavel.alpha = 0.0
+        }, completion: nil)
     }
     //正解時のアクション
     func correctAction(){
@@ -126,6 +138,7 @@ class Level3ViewController: UIViewController {
     }
     func gameover(){
         if lifeNum == 0{
+            allhide()
             self.performSegue(withIdentifier: "gameover3", sender: self)
         }
     }
@@ -182,6 +195,8 @@ class Level3ViewController: UIViewController {
             self.endLabel.text = "違うよ。。"
             self.lifeNum -= 1
             self.life.text = "LIFE:\(lifeNum)"
+            Fadeout(lavel : Wrong, starttime : 0.7, delaytime : 0.5)
+            Fadeout(lavel : endLabel, starttime : 0.7, delaytime : 0.5)
             unhide()
             gameover()
             life1()
@@ -194,6 +209,8 @@ class Level3ViewController: UIViewController {
             self.endLabel.text = "違うよ。。"
             self.lifeNum -= 1
             self.life.text = "LIFE:\(lifeNum)"
+            Fadeout(lavel : Wrong, starttime : 0.7, delaytime : 0.5)
+            Fadeout(lavel : endLabel, starttime : 0.7, delaytime : 0.5)
             unhide()
             gameover()
             life1()
@@ -206,6 +223,8 @@ class Level3ViewController: UIViewController {
             self.endLabel.text = "違うよ。。"
             self.lifeNum -= 1
             self.life.text = "LIFE:\(lifeNum)"
+            Fadeout(lavel : Wrong, starttime : 0.7, delaytime : 0.5)
+            Fadeout(lavel : endLabel, starttime : 0.7, delaytime : 0.5)
             self.unhide()
             gameover()
             life1()
