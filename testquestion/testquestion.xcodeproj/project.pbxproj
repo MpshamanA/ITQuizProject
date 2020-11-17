@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		834E4FCC2556A37800D448F8 /* result2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E4FCB2556A37800D448F8 /* result2ViewController.swift */; };
 		836C8A09255AD52900D98CA7 /* result3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C8A08255AD52900D98CA7 /* result3ViewController.swift */; };
+		837BE05A256413C300D45B43 /* ruleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837BE059256413C300D45B43 /* ruleViewController.swift */; };
 		837CC555254833630007B089 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837CC554254833630007B089 /* resultViewController.swift */; };
 		8381397F2545617700F17409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381397E2545617700F17409 /* AppDelegate.swift */; };
 		838139812545617700F17409 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838139802545617700F17409 /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		834E4FCB2556A37800D448F8 /* result2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result2ViewController.swift; sourceTree = "<group>"; };
 		836C8A08255AD52900D98CA7 /* result3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result3ViewController.swift; sourceTree = "<group>"; };
+		837BE059256413C300D45B43 /* ruleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ruleViewController.swift; sourceTree = "<group>"; };
 		837CC554254833630007B089 /* resultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		8381397B2545617700F17409 /* testquestion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testquestion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8381397E2545617700F17409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				838139822545617700F17409 /* ViewController.swift */,
 				837CC554254833630007B089 /* resultViewController.swift */,
 				838139842545617700F17409 /* Main.storyboard */,
+				837BE059256413C300D45B43 /* ruleViewController.swift */,
 				834E4FCB2556A37800D448F8 /* result2ViewController.swift */,
 				836C8A08255AD52900D98CA7 /* result3ViewController.swift */,
 				83DACFB725513D450057D6BE /* Level3ViewController.swift */,
@@ -162,6 +165,7 @@
 				8381397F2545617700F17409 /* AppDelegate.swift in Sources */,
 				836C8A09255AD52900D98CA7 /* result3ViewController.swift in Sources */,
 				83E1F2FC254EBBB200869C9C /* Level2ViewController.swift in Sources */,
+				837BE05A256413C300D45B43 /* ruleViewController.swift in Sources */,
 				834E4FCC2556A37800D448F8 /* result2ViewController.swift in Sources */,
 				83945479254D6AF800A5D65C /* GameoverViewController.swift in Sources */,
 				838139812545617700F17409 /* SceneDelegate.swift in Sources */,

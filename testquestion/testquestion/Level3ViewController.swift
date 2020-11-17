@@ -1,10 +1,3 @@
-//
-//  Level3ViewController.swift
-//  testquestion
-//
-//  Created by ShoIwasaki on 2020/11/03.
-//
-
 import UIKit
 
 class Level3ViewController: UIViewController {

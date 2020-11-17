@@ -1,10 +1,3 @@
-//
-//  Level2ViewController.swift
-//  testquestion
-//
-//  Created by ShoIwasaki on 2020/11/01.
-//
-
 import UIKit
 
 class Level2ViewController: UIViewController {

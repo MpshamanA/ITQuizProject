@@ -1,10 +1,3 @@
-//
-//  homeViewController.swift
-//  testquestion
-//
-//  Created by ShoIwasaki on 2020/10/31.
-//
-
 import UIKit
 
 class homeViewController: UIViewController {
@@ -15,6 +8,7 @@ class homeViewController: UIViewController {
     @IBOutlet weak var level1: UIButton!
     @IBOutlet weak var level2: UIButton!
     @IBOutlet weak var level3: UIButton!
+    @IBOutlet weak var rule: UIButton!
     
     
     
@@ -29,6 +23,7 @@ class homeViewController: UIViewController {
         levelbuttonDecoration(buttonName : level1)
         levelbuttonDecoration(buttonName : level2)
         levelbuttonDecoration(buttonName : level3)
+        rule.setImage(UIImage.init(named: "rule"), for: UIControl.State.normal)
     }
     
 //    lavelのフェードイン
