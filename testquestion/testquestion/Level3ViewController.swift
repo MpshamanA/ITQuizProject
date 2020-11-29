@@ -14,16 +14,16 @@ class Level3ViewController: UIViewController {
     @IBOutlet weak var Wrong: UILabel!
     
     
-    var collectAnswer = String()
     var scoreNum : Int = 0
     var lifeNum : Int = 2
+    lazy var Question = Questions()
     
     let screenWidth:CGFloat = CGFloat(Float(UIScreen.main.bounds.size.width))
     let screenHeight:CGFloat = CGFloat(Float(UIScreen.main.bounds.size.height))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Questions()
+        QuestionFrame()
         hide()
         //        ダークモード無効
         self.overrideUserInterfaceStyle = .light
@@ -78,7 +78,7 @@ class Level3ViewController: UIViewController {
     func buttonDecoration(buttonName : UIButton) -> Void{
         buttonName.layer.cornerRadius = 10.0      // 角の半径
         buttonName.clipsToBounds = true           // この設定を入れないと角丸にならない
-        }
+    }
     //    次へボタンの装飾
     func NextbuttonDecoration() -> Void{
         self.Next.layer.borderWidth = 1.0
@@ -137,18 +137,11 @@ class Level3ViewController: UIViewController {
     }
     
     func NextAction(){
-        Questions()
+        QuestionFrame()
         hide()
     }
-    func mondai(mainQuestion: String, answer1: String, answer2: String, answer3: String, collectNum: String){
-        question?.text = "\(mainQuestion)"
-        button1?.setTitle("\(answer1)", for: UIControl.State.normal)
-        button2?.setTitle("\(answer2)", for: UIControl.State.normal)
-        button3?.setTitle("\(answer3)", for: UIControl.State.normal)
-        collectAnswer = "\(collectNum)"
-    }
     
-    func Questions(){
+    func QuestionFrame(){
         self.question.layer.borderWidth = 2.0
         self.question.layer.borderColor = UIColor.gray.cgColor
         // 角の半径
@@ -159,30 +152,50 @@ class Level3ViewController: UIViewController {
         
         //        スコアと問題を紐付け
         if scoreNum == 0{
-            mondai(mainQuestion: "改定 修正", answer1: "リバイズ", answer2: "シェア", answer3: "オーナー", collectNum: "1")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "改定 修正", answer1: "リバイズ", answer2: "シェア", answer3: "オーナー", collectNum: "1")
+            
         }else if scoreNum == 1{
-            mondai(mainQuestion: "最終決定", answer1: "レイヤー", answer2: "フィックス", answer3: "アジャイル", collectNum: "2")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "最終決定", answer1: "レイヤー", answer2: "フィックス", answer3: "アジャイル", collectNum: "2")
+            
         }else if scoreNum == 2{
-            mondai(mainQuestion: "下書き", answer1: "ドラフト", answer2: "アドオン", answer3: "アドレス", collectNum: "1")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "下書き", answer1: "ドラフト", answer2: "アドオン", answer3: "アドレス", collectNum: "1")
+            
         }else if scoreNum == 3{
-            mondai(mainQuestion: "予算", answer1: "バジェット", answer2: "コンフリクト", answer3: "スキーム", collectNum: "1")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "予算", answer1: "バジェット", answer2: "コンフリクト", answer3: "スキーム", collectNum: "1")
+            
         }else if scoreNum == 4{
-            mondai(mainQuestion: "合意", answer1: "ドラック", answer2: "ピヴォット", answer3: "コンセンサス", collectNum: "3")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "合意", answer1: "ドラック", answer2: "ピヴォット", answer3: "コンセンサス", collectNum: "3")
+            
         }else if scoreNum == 5{
-            mondai(mainQuestion: "主導権", answer1: "リバイズ", answer2: "トラック", answer3: "イニシアチブ", collectNum: "3")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "主導権", answer1: "リバイズ", answer2: "トラック", answer3: "イニシアチブ", collectNum: "3")
+            
         }else if scoreNum == 6{
-            mondai(mainQuestion: "余裕", answer1: "バッファ", answer2: "ワーク", answer3: "ディスコン", collectNum: "1")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "余裕", answer1: "バッファ", answer2: "ワーク", answer3: "ディスコン", collectNum: "1")
+            
         }else if scoreNum == 7{
-            mondai(mainQuestion: "途中経過の節目", answer1: "スキーム", answer2: "マイルストーン", answer3: "インスコ", collectNum: "2")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "途中経過の節目", answer1: "スキーム", answer2: "マイルストーン", answer3: "インスコ", collectNum: "2")
+            
         }else if scoreNum == 8{
-            mondai(mainQuestion: "範囲", answer1: "ロールバック", answer2: "プッシュ", answer3: "スコープ", collectNum: "3")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "範囲", answer1: "ロールバック", answer2: "プッシュ", answer3: "スコープ", collectNum: "3")
+            
         }else{
-            mondai(mainQuestion: "正規の社員", answer1: "リーン", answer2: "イグジット", answer3: "プロパー", collectNum: "3")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "正規の社員", answer1: "リーン", answer2: "イグジット", answer3: "プロパー", collectNum: "3")
+            
         }
         
     }
     @IBAction func buttonAction1(_ sender: Any) {
-        if collectAnswer == "1"{
+        if Question.collectAnswer == "1"{
             correctAction()
         }else{
             self.endLabel.text = "違うよ。。"
@@ -196,7 +209,7 @@ class Level3ViewController: UIViewController {
         }
     }
     @IBAction func buttonAction2(_ sender: Any) {
-        if collectAnswer == "2"{
+        if Question.collectAnswer == "2"{
             correctAction()
         }else{
             self.endLabel.text = "違うよ。。"
@@ -210,7 +223,7 @@ class Level3ViewController: UIViewController {
         }
     }
     @IBAction func buttonAction3(_ sender: Any) {
-        if collectAnswer == "3"{
+        if Question.collectAnswer == "3"{
             correctAction()
         }else{
             self.endLabel.text = "違うよ。。"

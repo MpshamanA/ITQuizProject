@@ -21,6 +21,7 @@
 		83945479254D6AF800A5D65C /* GameoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83945478254D6AF800A5D65C /* GameoverViewController.swift */; };
 		83DACFB825513D450057D6BE /* Level3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DACFB725513D450057D6BE /* Level3ViewController.swift */; };
 		83E1F2FC254EBBB200869C9C /* Level2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E1F2FB254EBBB200869C9C /* Level2ViewController.swift */; };
+		83F78A17257204AC00E5F4B2 /* Questions-Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F78A16257204AC00E5F4B2 /* Questions-Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		83945478254D6AF800A5D65C /* GameoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameoverViewController.swift; sourceTree = "<group>"; };
 		83DACFB725513D450057D6BE /* Level3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3ViewController.swift; sourceTree = "<group>"; };
 		83E1F2FB254EBBB200869C9C /* Level2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2ViewController.swift; sourceTree = "<group>"; };
+		83F78A16257204AC00E5F4B2 /* Questions-Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questions-Class.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				836C8A08255AD52900D98CA7 /* result3ViewController.swift */,
 				83DACFB725513D450057D6BE /* Level3ViewController.swift */,
 				83E1F2FB254EBBB200869C9C /* Level2ViewController.swift */,
+				83F78A16257204AC00E5F4B2 /* Questions-Class.swift */,
 				83945478254D6AF800A5D65C /* GameoverViewController.swift */,
 				83945475254D6A8100A5D65C /* homeViewController.swift */,
 				838139872545617800F17409 /* Assets.xcassets */,
@@ -168,6 +171,7 @@
 				837BE05A256413C300D45B43 /* ruleViewController.swift in Sources */,
 				834E4FCC2556A37800D448F8 /* result2ViewController.swift in Sources */,
 				83945479254D6AF800A5D65C /* GameoverViewController.swift in Sources */,
+				83F78A17257204AC00E5F4B2 /* Questions-Class.swift in Sources */,
 				838139812545617700F17409 /* SceneDelegate.swift in Sources */,
 				83945476254D6A8100A5D65C /* homeViewController.swift in Sources */,
 				837CC555254833630007B089 /* resultViewController.swift in Sources */,
@@ -319,13 +323,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UUMG39Z2JJ;
+				DEVELOPMENT_TEAM = 7X5HD5B2PU;
 				INFOPLIST_FILE = testquestion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.pshaman.testquestion;
+				PRODUCT_BUNDLE_IDENTIFIER = org.pshaman.question;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -338,13 +342,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UUMG39Z2JJ;
+				DEVELOPMENT_TEAM = 7X5HD5B2PU;
 				INFOPLIST_FILE = testquestion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.pshaman.testquestion;
+				PRODUCT_BUNDLE_IDENTIFIER = org.pshaman.question;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

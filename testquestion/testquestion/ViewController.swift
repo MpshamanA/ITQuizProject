@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var Wrong: UILabel!
     
     
-    var collectAnswer = String()
     var scoreNum : Int = 0
     var lifeNum : Int = 3
+    lazy var Question = Questions()
     
     let screenWidth:CGFloat = CGFloat(Float(UIScreen.main.bounds.size.width))
     let screenHeight:CGFloat = CGFloat(Float(UIScreen.main.bounds.size.height))
@@ -24,14 +24,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hide()
-        Questions()
+        QuestionFrame()
         //        ダークモード無効
         self.overrideUserInterfaceStyle = .light
         buttonDecoration(buttonName : button1)
         buttonDecoration(buttonName : button2)
         buttonDecoration(buttonName : button3)
     }
-//    全部非表示
+    //    全部非表示
     func allhide(){
         question.isHidden = true
         button1.isHidden = true
@@ -138,18 +138,11 @@ class ViewController: UIViewController {
     }
     
     func NextAction(){
-        Questions()
+        QuestionFrame()
         hide()
     }
-    func mondai(mainQuestion: String, answer1: String, answer2: String, answer3: String, collectNum: String){
-        question?.text = "\(mainQuestion)"
-        button1?.setTitle("\(answer1)", for: UIControl.State.normal)
-        button2?.setTitle("\(answer2)", for: UIControl.State.normal)
-        button3?.setTitle("\(answer3)", for: UIControl.State.normal)
-        collectAnswer = "\(collectNum)"
-    }
     
-    func Questions(){
+    func QuestionFrame(){
         self.question.layer.borderWidth = 2.0
         self.question.layer.borderColor = UIColor.gray.cgColor
         self.question.layer.cornerRadius = 20.0      // 角の半径
@@ -158,21 +151,31 @@ class ViewController: UIViewController {
         
         //        スコアと問題を紐付け
         if scoreNum == 0{
-            mondai(mainQuestion: "プログラムの不具合", answer1: "バグ", answer2: "アジェンダ", answer3: "モジュール", collectNum: "1")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "プログラムの不具合", answer1: "バグ", answer2: "アジェンダ", answer3: "モジュール", collectNum: "1")
+            
         }else if scoreNum == 1{
-            mondai(mainQuestion: "任務", answer1: "ドラフト", answer2: "マイルストーン", answer3: "ミッション", collectNum: "3")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "任務", answer1: "ドラフト", answer2: "マイルストーン", answer3: "ミッション", collectNum: "3")
+            
         }else if scoreNum == 2{
-            mondai(mainQuestion: "スケジュール通り", answer1: "オンスケ", answer2: "インフラ", answer3: "アドイン", collectNum: "1")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "スケジュール通り", answer1: "オンスケ", answer2: "インフラ", answer3: "アドイン", collectNum: "1")
+            
         }else if scoreNum == 3{
-            mondai(mainQuestion: "確約", answer1: "インプット", answer2: "コミット", answer3: "ディフ", collectNum: "2")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "確約", answer1: "インプット", answer2: "コミット", answer3: "ディフ", collectNum: "2")
+            
         }else{
-            mondai(mainQuestion: "危機的", answer1: "ベスト", answer2: "クリティカル", answer3: "リリース", collectNum: "2")
+            
+            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "危機的", answer1: "ベスト", answer2: "クリティカル", answer3: "リリース", collectNum: "2")
+            
         }
         
     }
     
     @IBAction func buttonAction1(_ sender: Any) {
-        if collectAnswer == "1"{
+        if Question.collectAnswer == "1"{
             correctAction()
         }else{
             self.endLabel.text = "違うよ。。"
@@ -187,7 +190,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func buttonAction2(_ sender: Any) {
-        if collectAnswer == "2"{
+        if Question.collectAnswer == "2"{
             correctAction()
         }else{
             self.endLabel.text = "違うよ。。"
@@ -201,7 +204,7 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func buttonAction3(_ sender: Any) {
-        if collectAnswer == "3"{
+        if Question.collectAnswer == "3"{
             correctAction()
         }else{
             self.endLabel.text = "違うよ。。"
