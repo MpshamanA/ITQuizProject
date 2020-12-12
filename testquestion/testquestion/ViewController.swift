@@ -5,7 +5,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var endLabel: UILabel!
     @IBOutlet weak var Next: UIButton!
     @IBOutlet weak var score: UILabel!
@@ -15,7 +14,7 @@ class ViewController: UIViewController {
     
     
     var scoreNum : Int = 0
-    var lifeNum : Int = 3
+    var lifeNum : Int = 5
     lazy var Question = Questions()
     
     let screenWidth:CGFloat = CGFloat(Float(UIScreen.main.bounds.size.width))
@@ -29,14 +28,12 @@ class ViewController: UIViewController {
         self.overrideUserInterfaceStyle = .light
         buttonDecoration(buttonName : button1)
         buttonDecoration(buttonName : button2)
-        buttonDecoration(buttonName : button3)
     }
     //    全部非表示
     func allhide(){
         question.isHidden = true
         button1.isHidden = true
         button2.isHidden = true
-        button3.isHidden = true
         endLabel.isHidden = true
         Next.isHidden = true
         score.isHidden = true
@@ -66,13 +63,11 @@ class ViewController: UIViewController {
     func hidebutton(){
         self.button1.isHidden = true
         self.button2.isHidden = true
-        self.button3.isHidden = true
     }
     //　　回答ボタン表示
     func unhidebutton(){
         self.button1.isHidden = false
         self.button2.isHidden = false
-        self.button3.isHidden = false
     }
     //    解答ボタンの装飾
     func buttonDecoration(buttonName : UIButton) -> Void{
@@ -98,7 +93,7 @@ class ViewController: UIViewController {
     func correctAction(){
         self.round.text = "○"
         self.round.textColor = UIColor.red
-        self.round.font = UIFont.systemFont(ofSize: 150)
+        self.round.font = UIFont.systemFont(ofSize: 170)
         self.round.center = CGPoint(x: screenWidth/2, y: screenHeight/2)
         self.scoreNum += 1
         self.score.text = "SCORE:\(scoreNum)"
@@ -150,26 +145,27 @@ class ViewController: UIViewController {
         self.Next.isHidden = true
         
         //        スコアと問題を紐付け
+
         if scoreNum == 0{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "プログラムの不具合", answer1: "バグ", answer2: "アジェンダ", answer3: "モジュール", collectNum: "1")
-            
+            Question.QuestionLevel1(question: question, button1: button1, button2: button2, mainQuestion: "プログラムの不具合", answer1: "バグ", answer2: "アジェンダ", collectNum: "1")
+    
         }else if scoreNum == 1{
-            
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "任務", answer1: "ドラフト", answer2: "マイルストーン", answer3: "ミッション", collectNum: "3")
-            
+ 
+            Question.QuestionLevel1(question: question, button1: button1, button2: button2, mainQuestion: "任務", answer1: "ドラフト", answer2: "ミッション", collectNum: "2")
+
         }else if scoreNum == 2{
-            
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "スケジュール通り", answer1: "オンスケ", answer2: "インフラ", answer3: "アドイン", collectNum: "1")
-            
+
+            Question.QuestionLevel1(question: question, button1: button1, button2: button2, mainQuestion: "スケジュール通り", answer1: "オンスケ", answer2: "インフラ", collectNum: "1")
+
         }else if scoreNum == 3{
-            
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "確約", answer1: "インプット", answer2: "コミット", answer3: "ディフ", collectNum: "2")
-            
+
+            Question.QuestionLevel1(question: question, button1: button1, button2: button2, mainQuestion: "確約", answer1: "インプット", answer2: "コミット", collectNum: "2")
+
         }else{
-            
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "危機的", answer1: "ベスト", answer2: "クリティカル", answer3: "リリース", collectNum: "2")
-            
+
+            Question.QuestionLevel1(question: question, button1: button1, button2: button2, mainQuestion: "危機的", answer1: "ベスト", answer2: "クリティカル", collectNum: "2")
+
         }
         
     }

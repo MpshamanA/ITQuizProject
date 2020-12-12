@@ -6,9 +6,7 @@ class resultViewController: UIViewController {
         super.viewDidLoad()
         //        ダークモード無効
         self.overrideUserInterfaceStyle = .light
-        NextbuttonDecoration(buttonName: nextLevel2)
         NextbuttonDecoration(buttonName: homeButton)
-        
     }
     @IBOutlet weak var nextLevel2: UIButton!
     @IBOutlet weak var homeButton: UIButton!
@@ -20,5 +18,16 @@ class resultViewController: UIViewController {
         buttonName.clipsToBounds = true           // この設定を入れないと角丸にならない
     }
     
+    @IBAction func homeAction(_ sender: Any) {
+        
+        performSegue(withIdentifier: "homeViewContoroller", sender: nil)
+        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homeViewContoroller" {
+            let nextVC = segue.destination as! homeViewController
+            nextVC.LevelHidden = "LEVEL2"
+        }
+    }
 }

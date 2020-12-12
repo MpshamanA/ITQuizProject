@@ -6,6 +6,7 @@ class Level3ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var endLabel: UILabel!
     @IBOutlet weak var Next: UIButton!
     @IBOutlet weak var score: UILabel!
@@ -30,6 +31,7 @@ class Level3ViewController: UIViewController {
         buttonDecoration(buttonName : button1)
         buttonDecoration(buttonName : button2)
         buttonDecoration(buttonName : button3)
+        buttonDecoration(buttonName : button4)
     }
     //    全部非表示
     func allhide(){
@@ -37,6 +39,7 @@ class Level3ViewController: UIViewController {
         button1.isHidden = true
         button2.isHidden = true
         button3.isHidden = true
+        button4.isHidden = true
         endLabel.isHidden = true
         Next.isHidden = true
         score.isHidden = true
@@ -67,12 +70,14 @@ class Level3ViewController: UIViewController {
         self.button1.isHidden = true
         self.button2.isHidden = true
         self.button3.isHidden = true
+        self.button4.isHidden = true
     }
     //　　回答ボタン表示
     func unhidebutton(){
         self.button1.isHidden = false
         self.button2.isHidden = false
         self.button3.isHidden = false
+        self.button4.isHidden = false
     }
     //    解答ボタンの装飾
     func buttonDecoration(buttonName : UIButton) -> Void{
@@ -97,7 +102,7 @@ class Level3ViewController: UIViewController {
     func correctAction(){
         self.round.text = "○"
         self.round.textColor = UIColor.red
-        self.round.font = UIFont.systemFont(ofSize: 150)
+        self.round.font = UIFont.systemFont(ofSize: 140)
         self.round.center = CGPoint(x: screenWidth/2, y: screenHeight/2)
         self.scoreNum += 1
         self.score.text = "SCORE:\(scoreNum)"
@@ -153,43 +158,61 @@ class Level3ViewController: UIViewController {
         //        スコアと問題を紐付け
         if scoreNum == 0{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "改定 修正", answer1: "リバイズ", answer2: "シェア", answer3: "オーナー", collectNum: "1")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "改定 修正", answer1: "リバイズ", answer2: "シェア", answer3: "オーナー", answer4: "String", collectNum: "1")
             
         }else if scoreNum == 1{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "最終決定", answer1: "レイヤー", answer2: "フィックス", answer3: "アジャイル", collectNum: "2")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "最終決定", answer1: "レイヤー", answer2: "フィックス", answer3: "アジャイル", answer4: "String", collectNum: "2")
+            
+//            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "最終決定", answer1: "レイヤー", answer2: "フィックス", answer3: "アジャイル", collectNum: "2")
             
         }else if scoreNum == 2{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "下書き", answer1: "ドラフト", answer2: "アドオン", answer3: "アドレス", collectNum: "1")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "下書き", answer1: "ドラフト", answer2: "アドオン", answer3: "アドレス", answer4: "String", collectNum: "1")
+            
+//            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "下書き", answer1: "ドラフト", answer2: "アドオン", answer3: "アドレス", collectNum: "1")
             
         }else if scoreNum == 3{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "予算", answer1: "バジェット", answer2: "コンフリクト", answer3: "スキーム", collectNum: "1")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "予算", answer1: "バジェット", answer2: "コンフリクト", answer3: "スキーム", answer4: "String", collectNum: "1")
+            
+//            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "予算", answer1: "バジェット", answer2: "コンフリクト", answer3: "スキーム", collectNum: "1")
             
         }else if scoreNum == 4{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "合意", answer1: "ドラック", answer2: "ピヴォット", answer3: "コンセンサス", collectNum: "3")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "合意", answer1: "ドラック", answer2: "ピヴォット", answer3: "コンセンサス", answer4: "String", collectNum: "3")
+            
+//            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "合意", answer1: "ドラック", answer2: "ピヴォット", answer3: "コンセンサス", collectNum: "3")
             
         }else if scoreNum == 5{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "主導権", answer1: "リバイズ", answer2: "トラック", answer3: "イニシアチブ", collectNum: "3")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "主導権", answer1: "リバイズ", answer2: "トラック", answer3: "イニシアチブ", answer4: "String", collectNum: "3")
+            
+//            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "主導権", answer1: "リバイズ", answer2: "トラック", answer3: "イニシアチブ", collectNum: "3")
             
         }else if scoreNum == 6{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "余裕", answer1: "バッファ", answer2: "ワーク", answer3: "ディスコン", collectNum: "1")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "余裕", answer1: "バッファ", answer2: "ワーク", answer3: "ディスコン", answer4: "String", collectNum: "1")
+            
+//            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "余裕", answer1: "バッファ", answer2: "ワーク", answer3: "ディスコン", collectNum: "1")
             
         }else if scoreNum == 7{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "途中経過の節目", answer1: "スキーム", answer2: "マイルストーン", answer3: "インスコ", collectNum: "2")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "途中経過の節目", answer1: "スキーム", answer2: "マイルストーン", answer3: "インスコ", answer4: "String", collectNum: "2")
+            
+//            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "途中経過の節目", answer1: "スキーム", answer2: "マイルストーン", answer3: "インスコ", collectNum: "2")
             
         }else if scoreNum == 8{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "範囲", answer1: "ロールバック", answer2: "プッシュ", answer3: "スコープ", collectNum: "3")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "範囲", answer1: "ロールバック", answer2: "プッシュ", answer3: "スコープ", answer4: "String", collectNum: "3")
+            
+//            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "範囲", answer1: "ロールバック", answer2: "プッシュ", answer3: "スコープ", collectNum: "3")
             
         }else{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "正規の社員", answer1: "リーン", answer2: "イグジット", answer3: "プロパー", collectNum: "3")
+            Question.QuestionLevel3(question: question, button1: button1, button2: button2, button3: button3, button4: button4, mainQuestion: "正規の社員", answer1: "リーン", answer2: "イグジット", answer3: "プロパー", answer4: "String", collectNum: "3")
+            
+//            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "正規の社員", answer1: "リーン", answer2: "イグジット", answer3: "プロパー", collectNum: "3")
             
         }
         
@@ -236,6 +259,21 @@ class Level3ViewController: UIViewController {
             life1()
         }
     }
+    @IBAction func buttonAction4(_ sender: Any) {
+        if Question.collectAnswer == "4"{
+            correctAction()
+        }else{
+            self.endLabel.text = "違うよ。。"
+            self.lifeNum -= 1
+            self.life.text = "LIFE:\(lifeNum)"
+            Fadeout(lavel : Wrong, starttime : 0.7, delaytime : 0.5)
+            Fadeout(lavel : endLabel, starttime : 0.7, delaytime : 0.5)
+            self.unhide()
+            gameover()
+            life1()
+        }
+    }
+    
     @IBAction func NextAction(_ sender: Any) {
         NextAction()
         unhidebutton()

@@ -16,4 +16,6 @@ class result3ViewController: UIViewController {
         buttonName.layer.cornerRadius = 10.0      // 角の半径
         buttonName.clipsToBounds = true           // この設定を入れないと角丸にならない
     }
+    
+    
 }

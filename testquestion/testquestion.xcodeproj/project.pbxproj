@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8346139525851964008D2A1F /* MaxViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8346139425851964008D2A1F /* MaxViewContoller.swift */; };
+		8347122D258258250001766B /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8347122C258258250001766B /* UIColor-Extension.swift */; };
 		834E4FCC2556A37800D448F8 /* result2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834E4FCB2556A37800D448F8 /* result2ViewController.swift */; };
 		836C8A09255AD52900D98CA7 /* result3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836C8A08255AD52900D98CA7 /* result3ViewController.swift */; };
 		837BE05A256413C300D45B43 /* ruleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837BE059256413C300D45B43 /* ruleViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8346139425851964008D2A1F /* MaxViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxViewContoller.swift; sourceTree = "<group>"; };
+		8347122C258258250001766B /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		834E4FCB2556A37800D448F8 /* result2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result2ViewController.swift; sourceTree = "<group>"; };
 		836C8A08255AD52900D98CA7 /* result3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result3ViewController.swift; sourceTree = "<group>"; };
 		837BE059256413C300D45B43 /* ruleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ruleViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +83,9 @@
 				838139822545617700F17409 /* ViewController.swift */,
 				837CC554254833630007B089 /* resultViewController.swift */,
 				838139842545617700F17409 /* Main.storyboard */,
+				8346139425851964008D2A1F /* MaxViewContoller.swift */,
 				837BE059256413C300D45B43 /* ruleViewController.swift */,
+				8347122C258258250001766B /* UIColor-Extension.swift */,
 				834E4FCB2556A37800D448F8 /* result2ViewController.swift */,
 				836C8A08255AD52900D98CA7 /* result3ViewController.swift */,
 				83DACFB725513D450057D6BE /* Level3ViewController.swift */,
@@ -172,9 +178,11 @@
 				834E4FCC2556A37800D448F8 /* result2ViewController.swift in Sources */,
 				83945479254D6AF800A5D65C /* GameoverViewController.swift in Sources */,
 				83F78A17257204AC00E5F4B2 /* Questions-Class.swift in Sources */,
+				8347122D258258250001766B /* UIColor-Extension.swift in Sources */,
 				838139812545617700F17409 /* SceneDelegate.swift in Sources */,
 				83945476254D6A8100A5D65C /* homeViewController.swift in Sources */,
 				837CC555254833630007B089 /* resultViewController.swift in Sources */,
+				8346139525851964008D2A1F /* MaxViewContoller.swift in Sources */,
 				83DACFB825513D450057D6BE /* Level3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

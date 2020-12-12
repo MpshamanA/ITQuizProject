@@ -98,7 +98,7 @@ class Level2ViewController: UIViewController {
     func correctAction(){
         self.round.text = "○"
         self.round.textColor = UIColor.red
-        self.round.font = UIFont.systemFont(ofSize: 150)
+        self.round.font = UIFont.systemFont(ofSize: 140)
         self.round.center = CGPoint(x: screenWidth/2, y: screenHeight/2)
         self.scoreNum += 1
         self.score.text = "SCORE:\(scoreNum)"
@@ -151,46 +151,72 @@ class Level2ViewController: UIViewController {
         self.question.clipsToBounds = true
         self.Next.isHidden = true
         
+        let randomNum = Int.random(in: 0 ..< 15)
+        
         //        スコアと問題を紐付け
-        if scoreNum == 0{
+        if randomNum == 0{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "曖昧", answer1: "インシデント", answer2: "ファジー", answer3: "マター", collectNum: "2")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "曖昧", answer1: "インシデント", answer2: "ファジー", answer3: "マター", collectNum: "2")
             
-        }else if scoreNum == 1{
+        }else if randomNum == 1{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "合意", answer1: "コミット", answer2: "バグ", answer3: "アグリー", collectNum: "3")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "合意", answer1: "コミット", answer2: "バグ", answer3: "アグリー", collectNum: "3")
             
-        }else if scoreNum == 2{
+        }else if randomNum == 2{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "問題", answer1: "マター", answer2: "クロージング", answer3: "スクラッチ", collectNum: "1")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "問題", answer1: "マター", answer2: "クロージング", answer3: "スクラッチ", collectNum: "1")
             
-        }else if scoreNum == 3{
+        }else if randomNum == 3{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "議題", answer1: "アジェンダ", answer2: "スコープ", answer3: "リバイズ", collectNum: "1")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "議題", answer1: "アジェンダ", answer2: "スコープ", answer3: "リバイズ", collectNum: "1")
             
-        }else if scoreNum == 4{
+        }else if randomNum == 4{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "保留", answer1: "アラート", answer2: "クリティカル", answer3: "ペンディング", collectNum: "3")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "保留", answer1: "アラート", answer2: "クリティカル", answer3: "ペンディング", collectNum: "3")
             
-        }else if scoreNum == 5{
+        }else if randomNum == 5{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "差分", answer1: "ファジー", answer2: "サマリー", answer3: "ディフ", collectNum: "3")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "差分", answer1: "ファジー", answer2: "サマリー", answer3: "ディフ", collectNum: "3")
             
-        }else if scoreNum == 6{
+        }else if randomNum == 6{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "合併", answer1: "マージ", answer2: "デプロイ", answer3: "リリース", collectNum: "1")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "合併", answer1: "マージ", answer2: "デプロイ", answer3: "リリース", collectNum: "1")
             
-        }else if scoreNum == 7{
+        }else if randomNum == 7{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "証跡", answer1: "フィックス", answer2: "エビデンス", answer3: "インシデント", collectNum: "2")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "証跡", answer1: "フィックス", answer2: "エビデンス", answer3: "インシデント", collectNum: "2")
             
-        }else if scoreNum == 8{
+        }else if randomNum == 8{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "遅れている", answer1: "ブレスト", answer2: "ビハインド", answer3: "リバイズ", collectNum: "2")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "遅れている", answer1: "ブレスト", answer2: "ビハインド", answer3: "リバイズ", collectNum: "2")
+            
+        }else if randomNum == 9{
+            
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "任命", answer1: "アサイン", answer2: "オフショア", answer3: "フィンテック", collectNum: "1")
+            
+        }else if randomNum == 10{
+            
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "プログラムの不具合", answer1: "バグ", answer2: "アジェンダ", answer3: "モジュール", collectNum: "1")
+            
+        }else if randomNum == 11{
+            
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "任務", answer1: "ドラフト", answer2: "マイルストーン", answer3: "ミッション", collectNum: "3")
+            
+        }else if randomNum == 12{
+            
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "スケジュール通り", answer1: "オンスケ", answer2: "インフラ", answer3: "アドイン", collectNum: "1")
+            
+        }else if randomNum == 13{
+            
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "確約", answer1: "インプット", answer2: "コミット", answer3: "ディフ", collectNum: "2")
+            
+        }else if randomNum == 14{
+            
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "危機的", answer1: "ベスト", answer2: "クリティカル", answer3: "リリース", collectNum: "2")
             
         }else{
             
-            Question.Question(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "任命", answer1: "アサイン", answer2: "オフショア", answer3: "フィンテック", collectNum: "1")
+            Question.QuestionLevel2(question: question, button1: button1, button2: button2, button3: button3, mainQuestion: "改定 修正", answer1: "リバイズ", answer2: "シェア", answer3: "オーナー", collectNum: "1")
             
         }
         

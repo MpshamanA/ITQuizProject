@@ -8,8 +8,10 @@ class homeViewController: UIViewController {
     @IBOutlet weak var level1: UIButton!
     @IBOutlet weak var level2: UIButton!
     @IBOutlet weak var level3: UIButton!
+    @IBOutlet weak var levelMax: UIButton!
     @IBOutlet weak var rule: UIButton!
     
+    var LevelHidden:String = "LEVEL1"
     
     
     override func viewDidLoad() {
@@ -24,6 +26,19 @@ class homeViewController: UIViewController {
         levelbuttonDecoration(buttonName : level2)
         levelbuttonDecoration(buttonName : level3)
         rule.setImage(UIImage.init(named: "rule"), for: UIControl.State.normal)
+
+        navigationController?.navigationBar.barTintColor = .rgb(red: 192, green: 192,blue: 192)
+        
+        if LevelHidden == "LEVEL1"{
+            level2.isHidden = true
+            level3.isHidden = true
+        }else if LevelHidden == "LEVEL2"{
+            level2.isHidden = false
+            level3.isHidden = true
+        }else if LevelHidden == "LEVEL3"{
+            level2.isHidden = false
+            level3.isHidden = false
+        }
     }
     
 //    lavelのフェードイン
@@ -33,7 +48,7 @@ class homeViewController: UIViewController {
             lavel.alpha = 1.0
         }, completion: nil)
     }
-    
+
     func labelslideY(Labels : UILabel, DurationTime : Double) -> Void{
         Labels.center = self.view.center
         UIView.animate(withDuration: (DurationTime), delay: 0.0, options: .curveEaseIn, animations: {
@@ -47,4 +62,5 @@ class homeViewController: UIViewController {
         buttonName.layer.cornerRadius = 5.0      // 角の半径
         buttonName.clipsToBounds = true           // この設定を入れないと角丸にならない
     }
+    
 }
