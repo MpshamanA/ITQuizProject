@@ -30,14 +30,16 @@ class homeViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = .rgb(red: 192, green: 192,blue: 192)
         
         if LevelHidden == "LEVEL1"{
-            level2.isHidden = true
-            level3.isHidden = true
+            level2.isEnabled = false
+            level2.alpha = 0.4
+            level3.isEnabled = false
+            level3.alpha = 0.4
         }else if LevelHidden == "LEVEL2"{
-            level2.isHidden = false
-            level3.isHidden = true
+            level2.isEnabled = true
+            level3.isEnabled = false
         }else if LevelHidden == "LEVEL3"{
-            level2.isHidden = false
-            level3.isHidden = false
+            level2.isEnabled = true
+            level3.isEnabled = true
         }
     }
     

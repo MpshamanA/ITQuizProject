@@ -5,6 +5,7 @@ import UIKit
 class Questions{
     
     var collectAnswer = String()
+    var answers = String()
     
     func QuestionLevel1(question: UILabel, button1: UIButton, button2: UIButton, mainQuestion: String, answer1: String, answer2: String, collectNum: String){
         
@@ -31,5 +32,10 @@ class Questions{
         button3.setTitle("\(answer3)", for: UIControl.State.normal)
         button4.setTitle("\(answer4)", for: UIControl.State.normal)
         collectAnswer = "\(collectNum)"
+    }
+    
+    func levelMax(questions: UILabel,question: String,answer: String) -> Void {
+        questions.text = question
+        answers = answer
     }
 }
