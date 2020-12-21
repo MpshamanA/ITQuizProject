@@ -33,6 +33,7 @@ class Level3ViewController: UIViewController {
         buttonDecoration(buttonName : button3)
         buttonDecoration(buttonName : button4)
     }
+    
     //    全部非表示
     func allhide(){
         question.isHidden = true
