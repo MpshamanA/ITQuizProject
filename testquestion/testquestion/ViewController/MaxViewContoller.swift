@@ -12,7 +12,7 @@ class MaxViewContoller: UIViewController, UITextFieldDelegate {
     
     var scoreNum = 0
     lazy var Question = Questions()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textAnswer.delegate = self
@@ -21,7 +21,7 @@ class MaxViewContoller: UIViewController, UITextFieldDelegate {
         nextbutton.isHidden = true
         QuestionFrame()
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // キーボードを閉じる
         textAnswer.resignFirstResponder()
@@ -38,10 +38,10 @@ class MaxViewContoller: UIViewController, UITextFieldDelegate {
         self.questions.clipsToBounds = true
         
         
-//        配列に数字を入れシャッフル
+        //        配列に数字を入れシャッフル
         var questionInputNum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
         questionInputNum.shuffle()
-//        シャッフルされた配列の最初の数字を変数に代入
+        //        シャッフルされた配列の最初の数字を変数に代入
         let select = questionInputNum[0]
         
         
@@ -76,7 +76,7 @@ class MaxViewContoller: UIViewController, UITextFieldDelegate {
         }else{
             Question.levelMax(questions: questions, question: "試験15", answer: "テスト")
         }
-
+        
     }
     @IBAction func ConfirmAction(_ sender: Any) {
         if answer.text == Question.answers{
